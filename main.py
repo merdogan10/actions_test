@@ -1,11 +1,9 @@
-import re
-
-
-import random
-import statistics
-from collections import defaultdict
 import itertools
 import math
+import random
+import re
+import statistics
+from collections import defaultdict
 
 sampl_dict = defaultdict(list)
 
