@@ -46,14 +46,14 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - uses: isort/isort-action@master
-        with:
-          configuration: "--profile black"
-      #- uses: psf/black@stable
+      #- uses: isort/isort-action@master
       #  with:
-      #    options: ""
-      #    src: "."
-      #    version: "21.9b0"
+      #    configuration: "--profile black"
+      - uses: psf/black@stable
+        with:
+          options: ""
+          src: "."
+          version: "21.9b0"
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "style: Automated change"
