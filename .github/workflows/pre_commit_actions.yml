@@ -37,6 +37,8 @@ jobs:
     # needs: [check-commit-message]
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
       - uses: actions/setup-python@v2
         with:
           python-version: 3.8
