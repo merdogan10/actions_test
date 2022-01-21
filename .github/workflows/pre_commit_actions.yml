@@ -49,16 +49,11 @@ jobs:
       - uses: isort/isort-action@master
         with:
           configuration: "--profile black"
-      - uses: psf/black@stable
-        with:
-          options: ""
-          src: "."
-          version: "21.9b0"
-      # - uses: rickstaa/action-black@v1
-      #   with:
-      #      black_args: ". --check"
-      # - name: Black Code Formatter
-      #   uses: lgeiger/black-action@v1.0.1
+      #- uses: psf/black@stable
+      #  with:
+      #    options: ""
+      #    src: "."
+      #    version: "21.9b0"
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "style: Automated change"
