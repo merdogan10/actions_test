@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  checks: write
+  contents: write
+
 jobs:
   check-commit-message:
     name: Check Commit Message
@@ -43,11 +47,11 @@ jobs:
         with:
           python-version: 3.8
       - uses: isort/isort-action@master
-      # - uses: rickstaa/action-black@v1
-      #   with:
-      #     black_args: ". --check"
-      - name: Black Code Formatter
-        uses: lgeiger/black-action@v1.0.1
+      - uses: rickstaa/action-black@v1
+        with:
+           black_args: ". --check"
+      # - name: Black Code Formatter
+      #   uses: lgeiger/black-action@v1.0.1
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "style: Automated change"
