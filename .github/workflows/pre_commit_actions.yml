@@ -21,6 +21,8 @@ jobs:
           pattern: '\[[^]]+\] .+$'
           flags: 'gm'
           error: 'Your first line has to contain a commit type like "[BUGFIX]".'
+          excludeDescription: 'true' # optional: this excludes the description body of a pull request
+          excludeTitle: 'true'
       - name: Check Line Length
         uses: gsactions/commit-message-checker@v1
         with:
