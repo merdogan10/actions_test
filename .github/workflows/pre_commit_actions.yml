@@ -22,6 +22,7 @@ jobs:
           error: 'Commit title does not follow format-> type: message'
           excludeDescription: 'true'
           excludeTitle: 'true'
+          checkAllCommitMessages: 'true'
       - name: Check Line Length
         uses: gsactions/commit-message-checker@v1
         with:
