@@ -47,6 +47,8 @@ jobs:
         with:
           python-version: 3.8
       - uses: isort/isort-action@master
+        with:
+          configuration: "--profile black"
       - uses: psf/black@stable
         with:
           options: ""
