@@ -1,5 +1,5 @@
 name: Git Checks
-
+# Don't forget to write `git rebase -i --autosquash master` before merging
 on: [pull_request]
 
 jobs:
