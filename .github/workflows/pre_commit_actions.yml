@@ -36,10 +36,11 @@ jobs:
           options: ""
           src: "."
           version: "21.12b0"
+      # - run: head=`git log -1 --pretty=%h HEAD~1`
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Automated change"
-          commit_options: "--fixup"
+          commit_options: --fixup ${{ github.head_ref }}
       - run: echo "Formatted the code"
 
   
