@@ -17,6 +17,7 @@ def add5(var):
 
 def test_add5():
     assert add5(4) == 9
+    assert add5(3) == 3
 
 
 c = a + b + 2
