@@ -26,7 +26,7 @@ def main():
 
 		if len(commit_line) > 1 and len(commit_line[1].strip())>0:
 			sys.exit("second line not empty")
-		if len(commit_line)>2 and (len(commit_line[2])==0 or len(commit_line[2])>72)
+		if len(commit_line)>2 and (len(commit_line[2])==0 or len(commit_line[2])>72):
 			sys.exit("body length not valid")
 	sys.exit(0)
 
