@@ -2,7 +2,7 @@ import re
 import sys
 
 
-def main():
+def check():
     prefix = ["fix", "feat", "test", "update"]
 
     commit_file = sys.argv[1]
@@ -31,8 +31,8 @@ def main():
             len(commit_line[2]) == 0 or len(commit_line[2]) > 72
         ):
             sys.exit("body length not valid")
-    sys.exit("commit-msg check completed")
+    sys.exit(0)
 
 
 if __name__ == "__main__":
-    main()
+    check()
