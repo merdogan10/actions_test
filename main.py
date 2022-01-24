@@ -14,6 +14,5 @@ def add5(var):
     return var + 5
 
 
-
 c = a + b + 2
 print("completed")
