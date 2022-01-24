@@ -30,6 +30,7 @@ jobs:
           python-version: 3.8
       - uses: isort/isort-action@master
         with:
+          isortVersion: 5.10.1
           configuration: "--profile black"
       - uses: psf/black@stable
         with:
