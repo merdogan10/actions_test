@@ -5,6 +5,8 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+    paths-ignore:
+      - 'docs/**'
 
 permissions:
   checks: write
@@ -36,7 +38,6 @@ jobs:
           options: ""
           src: "."
           version: "21.12b0"
-      # - run: head=`git log -1 --pretty=%h HEAD~1`
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Automated change"
