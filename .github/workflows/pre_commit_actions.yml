@@ -17,6 +17,18 @@ jobs:
   # runs-on: ubuntu-latest
   # steps:
 
+  hooks:
+    name: Pre-commit hooks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v2
+      - uses: pre-commit/action@v2.0.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
   format-code:
     name: Format code
     runs-on: ubuntu-latest
@@ -42,6 +54,7 @@ jobs:
           commit_message: "Automated change"
           commit_options: --fixup ${{ github.head_ref }}
       - run: echo "Formatted the code"
+
   test-code:
     name: Test code
     runs-on: ubuntu-latest
