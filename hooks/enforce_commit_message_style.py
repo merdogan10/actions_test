@@ -31,7 +31,7 @@ def main():
             len(commit_line[2]) == 0 or len(commit_line[2]) > 72
         ):
             sys.exit("body length not valid")
-    sys.exit(0)
+    sys.exit("commit-msg check completed")
 
 
 if __name__ == "__main__":
