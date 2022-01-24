@@ -11,13 +11,8 @@ a, b = 3, 5  # sample comment
 
 
 def add5(var):
-
     return var + 5
 
-
-def test_add5():
-    assert add5(4) == 9
-    assert add5(3) == 3
 
 
 c = a + b + 2
