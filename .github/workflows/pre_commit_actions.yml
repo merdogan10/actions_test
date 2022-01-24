@@ -35,10 +35,11 @@ jobs:
         with:
           options: ""
           src: "."
-          version: "21.9b0"
+          version: "21.12b0"
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "style: Automated change"
+          commit_message: "Automated change"
+          commit_options: "--fixup"
       - run: echo "Formatted the code"
 
   
