@@ -10,6 +10,7 @@ sampl_dict = defaultdict(list)
 a, b = 3, 5  # sample comment
 l = []
 
+
 def add5(var):
     return var + 5
 
