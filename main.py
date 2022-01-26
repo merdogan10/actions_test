@@ -19,7 +19,7 @@ c = a + b + 2
 c = c + 1
 print("completed")
 d = 3
-e=7
+e = 7
 f = 3
 g = 4
 print("hello")
