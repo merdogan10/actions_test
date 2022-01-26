@@ -11,10 +11,10 @@ repos:
       - id: check-added-large-files
         args: ["--maxkb=100"]
         stages: [commit]
-  - repo: local
-    hooks:
-      - id: commit-message-style
-        name: commit-message-style
-        language: python
-        stages: [commit-msg]
-        entry: hooks/enforce_commit_message_style.py
+  # - repo: local
+  #   hooks:
+  #     - id: commit-message-style
+  #       name: commit-message-style
+  #       language: python
+  #       stages: [commit-msg]
+  #       entry: hooks/enforce_commit_message_style.py
